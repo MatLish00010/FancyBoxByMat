@@ -1,3 +1,4 @@
+/*
 var pictures = [
     'images/big_img/Cats_1.jpg',
     'images/big_img/Cats_2.jpg',
@@ -15,4 +16,4 @@ var addThumbnailClickHandler = function (thumbnail, photo) {
 
 for (var i = 0; i < thumbnails.length; i++){
     addThumbnailClickHandler(thumbnails[i], pictures[i]);
-}
+}*/

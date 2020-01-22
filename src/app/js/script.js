@@ -1,10 +1,12 @@
-(function($) {
+(function ($) {
     var $li = $('.img-list').find('> li'),
         $links = $li.find('> a'),
         $lightbox = $('.lightbox'),
         $next = $('.next'),
         $prev = $('.prev'),
         $overlay = $('.overlay'),
+        $startPlay = $('.autoplay'),
+        $stopPlay = $('.stop-play'),
         liIndex,
         targetImg;
 
@@ -36,7 +38,7 @@
 
     $overlay.click(closeLigtbox);
 
-    $links.click(function(e) {
+    $links.click(function (e) {
         e.preventDefault();
         targetImg = $(this).attr('href');
         liIndex = $(this).parent().index();
@@ -44,10 +46,10 @@
         $lightbox.fadeIn();
     });
 
-    $next.click( function() {
-        if ( (liIndex + 1) < $li.length ) {
+    $next.click(function () {
+        if ((liIndex + 1) < $li.length) {
             targetImg = getHref(liIndex + 1);
-            liIndex ++;
+            liIndex++;
         } else {
             targetImg = getHref(0);
             liIndex = 0;
@@ -55,16 +57,29 @@
         replaceImg(targetImg);
     });
 
-    $prev.click( function() {
-        if ( (liIndex) > 0 ) {
+    $prev.click(function () {
+        if ((liIndex) > 0) {
             targetImg = getHref(liIndex - 1);
-            liIndex --;
+            liIndex--;
         } else {
             targetImg = getHref($li.length - 1);
             liIndex = $li.length - 1;
         }
         replaceImg(targetImg);
     });
+    var time = null;
+
+    $startPlay.click(function () {
+        time =
+            setInterval(function () {
+                $next.click();
+            }, 500);
+    });
+
+    $stopPlay.click(function () {
+        clearInterval(time);
+    });
+
 
 })(jQuery);
 

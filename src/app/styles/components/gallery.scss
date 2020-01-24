@@ -114,10 +114,100 @@ img {
 }
 
 .autoplay {
-  font-size: 18px;
-  color:#fff;
   cursor: pointer;
   max-height: 100px;
+  position: relative;
+
+  /*&:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    //transform: translate(10px, 50%);
+    transform: rotate(120deg);
+    transition: 0.4s;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    //transform: translate(-10px ,50%);
+    transform: rotate(240deg) translate(-10px, -21%);
+    transition: 0.4s;
+  }
+
+  &:active:after {
+    transform: rotate(120deg);
+    transition: 0.2s;
+  };
+  &:active:before {
+    transform: rotate(240deg) translate(-10px, -21%);
+    transition: 0.2s;
+  }*/
+};
+
+.play {
+  cursor: pointer;
+  max-height: 100px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    //transform: translate(10px, 50%);
+    transform: rotate(120deg);
+    transition: 0.4s;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    //transform: translate(-10px ,50%);
+    transform: rotate(240deg) translate(-10px, -21%);
+    transition: 0.4s;
+  }
+};
+
+.stop {
+  cursor: pointer;
+  max-height: 100px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    transform: translate(10px, 50%);
+    //transform: rotate(120deg);
+    transition: 0.4s;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    background: green;
+    top: -50%;
+    transform: translate(-10px ,50%);
+    //transform: rotate(240deg) translate(-10px, -21%);
+    transition: 0.4s;
+  }
 };
 
 

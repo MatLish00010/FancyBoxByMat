@@ -75,9 +75,11 @@
                 setInterval(function () {
                     $next.click();
                 }, 500);
+            $(".autoplay").removeClass("play").addClass("stop");
         } else {
             clearInterval(time);
             time = null;
+            $(".autoplay").removeClass("stop").addClass("play");
         }
     });
 })(jQuery);

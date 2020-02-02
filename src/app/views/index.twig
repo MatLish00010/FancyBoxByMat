@@ -1,1 +1,35 @@
 {% extends 'layout/base.twig' %}
+{% block body %}
+    <body>
+    <section class="gallery" data-gallery>
+        <div class="container">
+            <h1 class="gallery__title">Galley_By_MaT</h1>
+            <ul class="img-list">
+                <li data-gallery-item="shock content">
+                    <a href="images/big_img/img-1-lg.jpg"><img src="images/big_img/img-1-sm.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/img-2-lg.jpg"><img src="images/big_img/img-2-sm.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/img-3-lg.jpg"><img src="images/big_img/img-3-sm.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/img-4-lg.jpg"><img src="images/big_img/img-4-sm.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="lightbox">
+            <div class="overlay"></div>
+            <figure>
+                <span class="prev"></span>
+                <img src="#">
+                <span class="next"></span>
+            </figure>
+            <span class="autoplay play">show</span>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    </body>
+{% endblock %}

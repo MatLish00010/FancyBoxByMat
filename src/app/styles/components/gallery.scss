@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #CCC;
   padding: 100px 0;
   font-family: sans-serif;
   font-size: 0;
@@ -11,6 +11,50 @@ img {
 
 .gallery {
   margin: 0 auto;
+
+  &__title {
+    position: relative;
+    display: block;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 10px;
+      bottom: 0;
+      transform: translateX(-200%);
+      transition: 0.4s;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 10px;
+      bottom: 0;
+      transform: translateX(130%);
+      transition: 0.4s;
+    }
+
+
+    &:hover {
+      font-size: 50px;
+      color: #003366;
+      border-bottom: 4px solid #3366CC;
+      border-top: 4px solid #3366CC;
+
+      &:before , &:after {
+        height: 65px;
+        background-color: #3366CC;
+      }
+    }
+  }
 }
 
 .img-list {
@@ -117,39 +161,6 @@ img {
   cursor: pointer;
   max-height: 100px;
   position: relative;
-
-  /*&:after {
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 10px;
-    background: green;
-    top: -50%;
-    //transform: translate(10px, 50%);
-    transform: rotate(120deg);
-    transition: 0.4s;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 10px;
-    background: green;
-    top: -50%;
-    //transform: translate(-10px ,50%);
-    transform: rotate(240deg) translate(-10px, -21%);
-    transition: 0.4s;
-  }
-
-  &:active:after {
-    transform: rotate(120deg);
-    transition: 0.2s;
-  };
-  &:active:before {
-    transform: rotate(240deg) translate(-10px, -21%);
-    transition: 0.2s;
-  }*/
 };
 
 .play {

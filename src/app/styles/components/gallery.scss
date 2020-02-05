@@ -25,11 +25,21 @@ img {
   margin: 0;
   padding: 0;
   text-align: center;
+  border-top: 4px solid #f87f22;
+  margin-top: 30px;
+  padding-top: 30px;
 
   li {
     display: inline-block;
     list-style: none;
     padding: 5px;
+    border: 2px solid #ffffff;
+    margin: 5px;
+    transition:0.3s;
+
+    &:hover {
+      border-color: #f87f22;
+    }
   }
 
   img {
@@ -72,6 +82,14 @@ img {
   max-height: 453px;
 }
 
+.next {
+  clip-path: polygon(0% 0, 98% 50%, 0% 100%, 0 100%, 0 0);
+}
+
+.prev {
+  transform: rotate(-180deg);
+  clip-path: polygon(0% 0, 98% 50%, 0% 100%, 0 100%, 0 0);
+}
 
 .next, .prev {
   position: relative;
@@ -80,9 +98,19 @@ img {
   padding: 15px 10px;
   cursor: pointer;
   font-size: 18px;
+  transition: 0.3s;
+  padding-right: 50px;
+
+  &:hover {
+    background-color: #7a3c0c;
+  }
+
+  &:active {
+    padding-right: 70px;
+  }
 }
 
-.next:after{
+/*.next:after{
   content: "";
   position: absolute;
   background: url(../../images/png_icon/arrow.svg) #CCC;
@@ -119,7 +147,7 @@ img {
     top: 50%;
     transition: 0.4s;
   }
-}
+}*/
 
 .autoplay {
   cursor: pointer;
@@ -164,7 +192,7 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: #CCC;
+    background: #7a3c0c;
     top: -50%;
     transform: translate(10px, 50%);
     transition: 0.4s;
@@ -174,7 +202,7 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: #CCC;
+    background: #7a3c0c;
     top: -50%;
     transform: translate(-10px ,50%);
     transition: 0.4s;

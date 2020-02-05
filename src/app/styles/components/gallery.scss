@@ -1,5 +1,5 @@
 body {
-  background-color: #CCC;
+  background-color: black;
   padding: 100px 0;
   font-family: sans-serif;
   font-size: 0;
@@ -12,48 +12,12 @@ img {
 .gallery {
   margin: 0 auto;
 
-  &__title {
-    position: relative;
-    display: block;
-    font-size: 40px;
-    color: black;
-    text-align: center;
-    transition: 0.3s;
-    padding-bottom: 5px;
-    border-bottom: 2px solid black;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 4px;
-      height: 10px;
-      bottom: 0;
-      transform: translateX(-200%);
-      transition: 0.4s;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 4px;
-      height: 10px;
-      bottom: 0;
-      transform: translateX(130%);
-      transition: 0.4s;
-    }
-
-
-    &:hover {
-      font-size: 50px;
-      color: #003366;
-      border-bottom: 4px solid #3366CC;
-      border-top: 4px solid #3366CC;
-
-      &:before , &:after {
-        height: 65px;
-        background-color: #3366CC;
-      }
-    }
+  &__logo {
+    background-image: url("../../images/big_img/harley-davidson.jpg");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 332px;
+    margin: 0 auto;
   }
 }
 
@@ -121,9 +85,9 @@ img {
 .next:after{
   content: "";
   position: absolute;
-  background: url(../../images/png_icon/arrow.svg) greenyellow;
+  background: url(../../images/png_icon/arrow.svg) #CCC;
   border-radius: 50%;
-  box-shadow: 0 0 10px greenyellow;
+  box-shadow: 0 0 10px #CCC;
   width: 50px;
   height: 50px;
   transform: translateY(-50%) rotate(180deg);
@@ -132,12 +96,12 @@ img {
 }
 
 .next:hover:after, .prev:hover:before {
-  box-shadow: 0 0 30px greenyellow;
+  box-shadow: 0 0 30px #3366CC;
   transition: 0.4s;
 };
 
 .next:active:after, .prev:active:before  {
-  box-shadow: 0 0 50px greenyellow;
+  box-shadow: 0 0 50px #3366CC;
   transition: 0.4s;
 };
 
@@ -146,8 +110,8 @@ img {
   &:before {
     content: "";
     position: absolute;
-    background: url(../../images/png_icon/arrow.svg) greenyellow;
-    box-shadow: 0 0 10px greenyellow;
+    background: url(../../images/png_icon/arrow.svg) #CCC;
+    box-shadow: 0 0 10px #CCC;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -173,9 +137,8 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: green;
+    background: #CCC;
     top: -50%;
-    //transform: translate(10px, 50%);
     transform: rotate(120deg);
     transition: 0.4s;
   }
@@ -185,9 +148,8 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: green;
+    background: #CCC;
     top: -50%;
-    //transform: translate(-10px ,50%);
     transform: rotate(240deg) translate(-10px, -21%);
     transition: 0.4s;
   }
@@ -202,10 +164,9 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: green;
+    background: #CCC;
     top: -50%;
     transform: translate(10px, 50%);
-    //transform: rotate(120deg);
     transition: 0.4s;
   }
   &:before {
@@ -213,10 +174,9 @@ img {
     position: absolute;
     height: 30px;
     width: 10px;
-    background: green;
+    background: #CCC;
     top: -50%;
     transform: translate(-10px ,50%);
-    //transform: rotate(240deg) translate(-10px, -21%);
     transition: 0.4s;
   }
 };

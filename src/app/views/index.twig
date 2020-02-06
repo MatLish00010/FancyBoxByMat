@@ -1,0 +1,47 @@
+{% extends 'layout/base.twig' %}
+{% block body %}
+    <body>
+    <section class="gallery" data-gallery>
+        <div class="container">
+            <div class="gallery__logo"></div>
+            <ul class="img-list">
+                <li data-gallery-item="shock content">
+                    <a href="images/big_img/moto-1.jpg"><img src="images/big_img/moto-1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-2.jpg"><img src="images/big_img/moto-2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-3.jpg"><img src="images/big_img/moto-3.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-4.jpg"><img src="images/big_img/moto-4.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-5.jpg"><img src="images/big_img/moto-5.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-6.jpg"><img src="images/big_img/moto-6.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-7.jpg"><img src="images/big_img/moto-7.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="images/big_img/moto-8.jpg"><img src="images/big_img/moto-8.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="lightbox">
+            <div class="overlay"></div>
+            <figure>
+                <span class="prev"></span>
+                <img src="#">
+                <span class="next"></span>
+            </figure>
+            <span class="autoplay play">show</span>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+    </body>
+{% endblock %}

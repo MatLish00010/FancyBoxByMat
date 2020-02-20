@@ -14,13 +14,15 @@
   "destinationPath": "public",
   "temporaryPath": "src/.tmp",
   "template_engine": "twig",
-  "javascript_libraries": [],
+  "javascript_libraries": [
+    "./node_modules/jquery/dist/jquery.min.js"
+  ],
   "use_babel": true,
   "minify_images": true,
   "css_source_maps": true,
   "js_source_maps": true,
   "concatenate_scripts": true,
-  "obfuscate" : false,
+  "obfuscate": false,
   "obfuscate_options": {},
   "critical_css": false,
   "inline_css": false,
